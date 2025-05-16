@@ -25,7 +25,7 @@ export default function Carousel({ data }: { data: DataProduct }) {
         disabled={currentIndex === 0}
         className="disabled:opacity-30 disabled:cursor-not-allowed hover:cursor-pointer"
       >
-        <FaAngleDoubleLeft className="text-xl lg:text-3xl text-teal-700 mr-4 lg:mr-10 hover:text-teal-900"/>
+        <FaAngleDoubleLeft className="text-xl lg:text-3xl text-white md:text-teal-700 mr-4 lg:mr-10 hover:text-teal-900"/>
       </button>
 
       <img
@@ -41,7 +41,7 @@ export default function Carousel({ data }: { data: DataProduct }) {
         disabled={currentIndex === data.images.length - 1}
         className="disabled:opacity-30 disabled:cursor-not-allowed hover:cursor-pointer"
       >
-        <FaAngleDoubleRight className="text-xl lg:text-3xl text-teal-700 ml-4 lg:ml-10 hover:text-teal-900"/>
+        <FaAngleDoubleRight className="text-xl lg:text-3xl text-white md:text-teal-700 ml-4 lg:ml-10 hover:text-teal-900"/>
       </button>
     </div>
   );
