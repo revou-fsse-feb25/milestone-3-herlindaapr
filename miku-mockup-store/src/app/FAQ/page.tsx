@@ -1,6 +1,6 @@
 export default function FAQ() {
     return (
-        <div className="bg-gradient-to-bl from-teal-700 to-teal-900 py-6">
+        <div className="bg-gradient-to-bl from-teal-700 to-teal-950 py-6">
             <div className="bg-white flex flex-col w-full lg:w-1/2 h-max justify-self-center shadow-lg shadow-gray-100/40 px-8 mt-12 py-4 lg:py-0">
                 <h1 className="text-xl lg:text-3xl text-center text-teal-900 pt-3">Frequently Asked Questions</h1>
                 <div className="flex flex-col gap-y-4 lg:gap-y-6 py-4 px-2 lg:py-8 lg:px-10">
