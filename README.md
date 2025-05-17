@@ -3,7 +3,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## 🔗 Live Demo
-To watch it live, visit: https://vercel.com/herlindaaprs-projects/miku-mockup-store
+To watch it live, visit: https://miku-mockup-store.vercel.app
 
 ## 🚀 Features
 
