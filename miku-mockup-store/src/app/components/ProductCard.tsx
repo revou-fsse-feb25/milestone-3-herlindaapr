@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ButtonCart from "./ButtonCart";
+import { DataProduct } from "../types/index.types";
 
 
 export default function ProductCard({product} : {product: DataProduct}) {
@@ -18,7 +19,12 @@ export default function ProductCard({product} : {product: DataProduct}) {
             <p className="text-gray-700 text-base font-semibold pb-10">${product.price}</p>
             <div className="flex flex-row self-end absolute bottom-2 right-2 text-sm">
                 <Link href={`/products/${product.id}`} className="text-teal-900 py-1 hover:underline">Details</Link>
-                <ButtonCart />
+                <ButtonCart product={{
+                    id: product.id,
+                    name: product.title,
+                    price: product.price,
+                    image: product.images[0],
+                }}/>
             </div>
         </div>
     );

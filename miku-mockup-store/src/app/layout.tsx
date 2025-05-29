@@ -3,6 +3,8 @@ import { Rowdies, Open_Sans } from 'next/font/google';
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { SessionProvider } from "./providers/SessionProvider";
+import { CartProvider } from "./contexts/CartContext";
 
 // app/layout.tsx or any component
 
@@ -38,9 +40,13 @@ export default function RootLayout({
       <body
         className={`${rowdies.variable} ${openSans.variable}`}>
         <>
-        <Navbar />
-        {children}
-        <Footer />
+        <CartProvider>
+          <SessionProvider>
+            <Navbar />
+            {children}
+          </SessionProvider>
+          <Footer />
+        </CartProvider>
         </>
       </body>
       </html>

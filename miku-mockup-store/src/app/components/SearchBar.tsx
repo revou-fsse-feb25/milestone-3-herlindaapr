@@ -1,4 +1,5 @@
 'use client'
+
 import { MouseEventHandler, useEffect, useState } from "react";
 
 export default function SearchBar({handleSearch}: {handleSearch: (searchInput: string) => void}) {
@@ -6,7 +7,7 @@ export default function SearchBar({handleSearch}: {handleSearch: (searchInput: s
     const handleInputChange = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         if (!searchInput.trim()) {
-            return;
+            return handleSearch("");;
         }
         handleSearch(searchInput);
     }
@@ -14,7 +15,7 @@ export default function SearchBar({handleSearch}: {handleSearch: (searchInput: s
 return (
     <div className="w-full mx-2 flex justify-center lg:justify-end pb-4 lg:pb-10">
         <form className="text-xs">
-            <div className="flex items-center border border-solid border-black/[.08] overflow-hidden shadow-sm focus-within:shadow-md transition-shadow">
+            <div className="flex items-center rounded overflow-hidden shadow-sm focus-within:shadow-lg">
                 <input
                     type="text"
                     value={searchInput}
