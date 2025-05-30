@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from 'react-icons/fa';
+import { DataProduct } from "../types/index.types";
 
 export default function Carousel({ data }: { data: DataProduct }) {
   const [currentIndex, setCurrentIndex] = useState(0);
