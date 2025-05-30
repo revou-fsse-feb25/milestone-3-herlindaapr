@@ -158,7 +158,7 @@ export default function AdminDashboard() {
         {stats.map((stat) => (
           <div
             key={stat.name}
-            className="bg-teal-950 rounded-lg shadow-lg p-6 border border-gray-700"
+            className="bg-teal-950 rounded-lg shadow-lg p-6 border border-teal-700"
           >
             <div className="flex items-center">
               <div
@@ -198,7 +198,7 @@ export default function AdminDashboard() {
 
       {/* Charts Row */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-teal-950 rounded-lg shadow-lg p-6 border border-gray-700">
+        <div className="bg-teal-950 rounded-lg shadow-lg p-6 border border-teal-700">
           <h3 className="text-lg font-medium text-white mb-4">
             Revenue Overview
           </h3>
@@ -218,7 +218,7 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        <div className="bg-teal-950 rounded-lg shadow-lg p-6 border border-gray-700">
+        <div className="bg-teal-950 rounded-lg shadow-lg p-6 border border-teal-700">
           <h3 className="text-lg font-medium text-white mb-4">
             Product Categories
           </h3>
@@ -296,15 +296,15 @@ export default function AdminDashboard() {
       </div>
 
       {/* Recent Orders */}
-      <div className="bg-teal-950 rounded-lg shadow-lg border border-gray-700">
-        <div className="px-6 py-4 border-b border-gray-700 flex justify-between items-center">
+      <div className="bg-teal-950 rounded-lg shadow-lg border border-teal-700">
+        <div className="px-6 py-4 border-b border-teal-700 flex justify-between items-center">
           <h3 className="text-lg font-medium text-white">Recent Orders</h3>
           <button className="text-sm text-blue-400 hover:text-blue-300">
             View all
           </button>
         </div>
         <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-700">
+          <table className="min-w-full divide-y divide-teal-700">
             <thead className="bg-gray-900">
               <tr>
                 <th
@@ -339,7 +339,7 @@ export default function AdminDashboard() {
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-teal-950 divide-y divide-gray-700">
+            <tbody className="bg-teal-950 divide-y divide-teal-700">
               {recentOrders.map((order) => (
                 <tr
                   key={order.id}

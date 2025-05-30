@@ -7,6 +7,7 @@ import ProductTable from "@/app/components/ProductTable";
 import AdminSidebar from "@/app/components/AdminSidebar";
 import { DataProduct } from "@/app/types/index.types";
 import LoadingSpinner from "@/app/components/LoadingSpinner";
+import NotFound from "@/app/components/NotFound";
 
 export default function AdminProductsPage() {
   const { data: session } = useSession();
@@ -148,7 +149,7 @@ export default function AdminProductsPage() {
               </h1>
               <button
                 onClick={handleCreateProduct}
-                className="bg-blue-600 px-4 py-2 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2"
+                className="bg-teal-600 px-4 py-2 text-white rounded-md hover:bg-teal-950 transition-colors flex items-center gap-2 hover:cursor-pointer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -220,25 +221,8 @@ export default function AdminProductsPage() {
             ) : isLoading ? (
               <LoadingSpinner />
             ) : products.length === 0 ? (
-              <div className="text-center py-20 bg-gray-800 rounded-lg border border-gray-700">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-16 w-16 mx-auto text-gray-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                  />
-                </svg>
-                <p className="mt-4 text-gray-300 text-lg">No products found</p>
-                <p className="text-gray-400 mt-2">
-                  Try adjusting your search or add a new product
-                </p>
+              <div className="items-center justify-items-center py-20 bg-teal-950 rounded-lg border border-gray-700">
+              <NotFound />
               </div>
             ) : (
               <div className="bg-gray-800 shadow overflow-hidden sm:rounded-lg border border-gray-700">
@@ -249,7 +233,7 @@ export default function AdminProductsPage() {
                 />
 
                 {/* Pagination */}
-                <div className="bg-gray-800 px-4 py-3 flex items-center justify-between border-t border-gray-700 sm:px-6">
+                <div className="bg-gray-950 px-4 py-3 flex items-center justify-between border-t border-teal-700 sm:px-6">
                   <div className="flex-1 flex justify-between sm:hidden">
                     <button
                       onClick={() =>
@@ -258,8 +242,8 @@ export default function AdminProductsPage() {
                       disabled={currentPage === 1}
                       className={`relative inline-flex items-center px-4 py-2 border rounded-md ${
                         currentPage === 1
-                          ? "bg-gray-700 text-gray-400 cursor-not-allowed border-gray-600"
-                          : "bg-gray-700 text-gray-200 hover:bg-gray-600 border-gray-600"
+                          ? "bg-teal-950 text-teal-400 cursor-not-allowed border-teal-950"
+                          : "bg-teal-900 text-teal-200 hover:cursor-pointer hover:bg-teal-950 border-teal-900"
                       } transition-colors`}
                     >
                       Previous
@@ -271,8 +255,8 @@ export default function AdminProductsPage() {
                       disabled={currentPage === totalPages}
                       className={`ml-3 relative inline-flex items-center px-4 py-2 border rounded-md ${
                         currentPage === totalPages
-                          ? "bg-gray-700 text-gray-400 cursor-not-allowed border-gray-600"
-                          : "bg-gray-700 text-gray-200 hover:bg-gray-600 border-gray-600"
+                          ? "bg-teal-700 text-teal-400 cursor-not-allowed border-teal-700"
+                          : "bg-teal-700 text-teal-200 hover:cursor-pointer hover:bg-teal-600 border-teal-700"
                       } transition-colors`}
                     >
                       Next
@@ -280,7 +264,7 @@ export default function AdminProductsPage() {
                   </div>
                   <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
                     <div>
-                      <p className="text-sm text-gray-300">
+                      <p className="text-sm text-teal-300">
                         Showing{" "}
                         <span className="font-medium">
                           {(currentPage - 1) * productsPerPage + 1}
@@ -308,8 +292,8 @@ export default function AdminProductsPage() {
                           disabled={currentPage === 1}
                           className={`relative inline-flex items-center px-2 py-2 rounded-l-md border ${
                             currentPage === 1
-                              ? "bg-gray-700 text-gray-400 cursor-not-allowed border-gray-600"
-                              : "bg-gray-700 text-gray-300 hover:bg-gray-600 border-gray-600"
+                              ? "bg-teal-900 text-teal-400 cursor-not-allowed border-teal-600"
+                              : "bg-teal-900 text-teal-300 hover:cursor-pointer hover:bg-teal-600 border-teal-600"
                           } transition-colors`}
                         >
                           <span className="sr-only">Previous</span>
@@ -336,8 +320,8 @@ export default function AdminProductsPage() {
                               onClick={() => setCurrentPage(pageNum)}
                               className={`relative inline-flex items-center px-4 py-2 border ${
                                 currentPage === pageNum
-                                  ? "bg-blue-800 border-blue-700 text-blue-100"
-                                  : "bg-gray-700 border-gray-600 text-gray-300 hover:bg-gray-600"
+                                  ? "bg-teal-600 border-teal-700 text-teal-100"
+                                  : "bg-teal-900 border-teal-700 hover:cursor-pointer text-teal-100 hover:bg-teal-700"
                               } text-sm font-medium transition-colors`}
                             >
                               {pageNum}
@@ -354,8 +338,8 @@ export default function AdminProductsPage() {
                           disabled={currentPage === totalPages}
                           className={`relative inline-flex items-center px-2 py-2 rounded-r-md border ${
                             currentPage === totalPages
-                              ? "bg-gray-700 text-gray-400 cursor-not-allowed border-gray-600"
-                              : "bg-gray-700 text-gray-300 hover:bg-gray-600 border-gray-600"
+                              ? "bg-teal-900 text-teal-400 cursor-not-allowed border-teal-600"
+                              : "bg-teal-900 text-teal-300 hover:cursor-pointer hover:bg-teal-600 border-teal-600"
                           } transition-colors`}
                         >
                           <span className="sr-only">Next</span>

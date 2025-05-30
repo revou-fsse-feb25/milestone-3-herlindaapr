@@ -49,6 +49,6 @@ export default function RootLayout({
         </CartProvider>
         </>
       </body>
-      </html>
+    </html>
   );
 }

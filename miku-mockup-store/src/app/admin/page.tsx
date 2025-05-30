@@ -8,7 +8,7 @@ export default function AdminPage() {
   const { data: session } = useSession();
 
   return (
-    <div className="min-h-screen bg-teal-800 py-20">
+    <div className="min-h-screen bg-teal-900 py-20">
       <div className="flex">
         <AdminSidebar />
         <div className="flex-1 ml-64 p-8">

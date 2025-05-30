@@ -23,7 +23,7 @@ export default function ProductTable({
 
   return (
     <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-700">
+      <table className="min-w-full divide-y divide-teal-700">
         <thead className="bg-gray-900">
           <tr>
             <th
@@ -58,7 +58,7 @@ export default function ProductTable({
             </th>
           </tr>
         </thead>
-        <tbody className="bg-teal-950 divide-y divide-gray-700">
+        <tbody className="bg-teal-950 divide-y divide-teal-700">
           {products.map((product) => (
             <tr
               key={product.id}
@@ -71,7 +71,7 @@ export default function ProductTable({
                 <div className="flex items-center">
                   <div className="flex-shrink-0 h-10 w-10">
                     <img
-                      className="h-10 w-10 rounded-full object-cover border border-gray-600"
+                      className="h-10 w-10 rounded-full object-cover border border-teal-600"
                       src={
                         product.images?.[0] || "https://placehold.co/400"
                       }

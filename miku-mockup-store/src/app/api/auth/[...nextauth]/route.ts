@@ -1,5 +1,4 @@
 import { NextAuthOptions } from "next-auth";
-import { NextResponse } from "next/server";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
