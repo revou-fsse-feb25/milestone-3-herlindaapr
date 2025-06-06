@@ -45,7 +45,7 @@ export default function Navbar() {
       </div>
 
       <Link
-        href="/cart"
+        href="/cart" aria-label="Cart"
         className={`relative p-2 text-text-light hover:text-primary-light dark:hover:text-primary-dark transition-colors ${
           isCartHighlighted ? 'animate-pulse' : ''
         }`}
